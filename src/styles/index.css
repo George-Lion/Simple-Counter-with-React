@@ -10,3 +10,14 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+
+.card-title{
+    font-size: 8em;
+}
+
+.container{
+    padding: 15px;
+    border-radius: 20px;
+    width:auto;
+    
+}

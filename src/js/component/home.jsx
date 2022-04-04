@@ -1,24 +1,33 @@
-import React from "react";
-
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+import React, { useState, useEffect } from "react";
+import Cards from "./card";
 
 //create your first component
+
 const Home = () => {
+	const time = <i className="fas fa-clock"></i>;
+	const [timer, setTimer] = useState(0);
+
+	useEffect(() => {
+		const interval = setInterval(() => {
+			setTimer(timer + 1);
+		}, 1000);
+
+		return () => clearInterval(interval);
+	});
+
 	return (
-		<div>
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
+		<div className="container justify-content-center">
+			<div className="container shadow-sm bg-dark">
+				<div className="row justify-content-center">
+					<Cards icon={time} />
+					<Cards num={Math.floor((timer / 100000) % 10)} />
+					<Cards num={Math.floor((timer / 10000) % 10)} />
+					<Cards num={Math.floor((timer / 1000) % 10)} />
+					<Cards num={Math.floor((timer / 100) % 10)} />
+					<Cards num={Math.floor((timer / 10) % 10)} />
+					<Cards num={Math.floor((timer / 1) % 10)} />
+				</div>
+			</div>
 		</div>
 	);
 };
