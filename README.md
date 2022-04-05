@@ -1,3 +1,17 @@
+## Simple Counter with React
+
+The counter is executed on React applying a useEffect function, in which our code will execute the interval and the constant that will increase our counter, for its rendering we apply props that are attached to the card component where the entire layout of the container is, finally our return incorporates the times with which the count will be executed on the screen.
+
+Recommended websites for theme icons, images and tools:
+
+[-Google Fonts](https://fonts.google.com/).
+
+[-Fontawesome](https://fontawesome.com/).
+
+[-Bootstrap](https://getbootstrap.com/).
+
+--------------------------------------------------------------
+
 # Hello World with React boilerplate
 <p>
   <a href="https://gitpod.io#https://github.com/4GeeksAcademy/react-hello.git"><img src="https://raw.githubusercontent.com/4GeeksAcademy/react-hello/master/open-in-gitpod.svg?sanitize=true" />
